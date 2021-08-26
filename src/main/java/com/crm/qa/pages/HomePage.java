@@ -16,6 +16,12 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//a[contains(text(),'Home')]")
 	WebElement homeLink;
 	
+	@FindBy(xpath="//a[contains(text(),'Calendar')]")
+	WebElement calendarLink;
+	
+	@FindBy(xpath="//a[contains(text(),'Companies')]")
+	WebElement companiesLink;
+	
 	@FindBy(xpath = "//a[contains(text(),'Contacts')]")
 	WebElement contactsLink;
 	
@@ -46,6 +52,11 @@ public class HomePage extends TestBase{
 	
 	public void clickOnHomeLink() {
 		homeLink.click();
+	}
+	
+	public CalendarPage clickOnCalendarLink() {
+		calendarLink.click();
+		return new CalendarPage();
 	}
 	
 	public ContactsPage clickOnContactsLink(){ 
